@@ -1,0 +1,24 @@
+services:
+  front_and_agent:
+    build:
+      context: ./front_and_agent
+      dockerfile: Dockerfile.mcp
+    container_name: front_and_agent
+    ports:
+      - "8501:8501"   
+    environment:
+    - OPENAI_API_KEY=${OPENAI_API_KEY}
+    depends_on:
+      - mcp_server
+
+  mcp_server:
+    build:
+      context: ./tool_mcp
+      dockerfile: Dockerfile.rag
+    container_name: mcp_server
+    ports:
+      - "56000:56000"
+    environment:
+    - OPENAI_API_KEY=${OPENAI_API_KEY}
+    volumes:
+      - ./tool_mcp/biography.pdf:/app/biography.pdf
