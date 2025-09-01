@@ -24,4 +24,27 @@ In the project root, create a `.env` file:
 ```bash
 OPENAI_API_KEY="your_openai_api_key_here"
 
+## How to Start
 
+### First Launch
+Run the following command to build and start both containers:
+
+```bash
+docker-compose up --build
+
+Wait until dependencies are installed.
+Stop with Ctrl+C.
+
+### Next Runs
+Start services without rebuilding:
+
+```bash
+docker-compose up
+
+---
+
+## Running the Client
+Once containers are running, open:
+http://localhost:8501
+
+This launches the Streamlit web interface where you can chat with the agent.
