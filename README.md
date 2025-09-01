@@ -21,15 +21,16 @@ Install Docker from the [official website](https://www.docker.com/).
 ### OpenAI API Key
 In the project root, create a `.env` file:
 
-```bash
+```markdown
 OPENAI_API_KEY="your_openai_api_key_here"
+
 
 ## How to Start
 
 ### First Launch
 Run the following command to build and start both containers:
 
-```bash
+```markdown
 docker-compose up --build
 
 Wait until dependencies are installed.
@@ -38,7 +39,7 @@ Stop with Ctrl+C.
 ### Next Runs
 Start services without rebuilding:
 
-```bash
+```markdown
 docker-compose up
 
 ---
