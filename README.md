@@ -23,7 +23,7 @@ In the project root, create a `.env` file:
 
 ```markdown
 OPENAI_API_KEY="your_openai_api_key_here"
-
+```
 
 ## How to Start
 
@@ -32,6 +32,7 @@ Run the following command to build and start both containers:
 
 ```markdown
 docker-compose up --build
+```
 
 Wait until dependencies are installed.
 Stop with Ctrl+C.
@@ -41,7 +42,7 @@ Start services without rebuilding:
 
 ```markdown
 docker-compose up
-
+```
 ---
 
 ## Running the Client
